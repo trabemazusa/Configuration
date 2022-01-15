@@ -1,5 +1,5 @@
-# My Neovim Config
+# My Neovim Configuration
 
-## Config Path
-`~/.config/nvim/init.vim`
+## Path
+`~/.config/nvim/`
 
