@@ -1,13 +1,14 @@
 " Plugin
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'vhdirk/vim-cmake'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
-
 
 " Plugin Setting
 " NERDTree
@@ -16,9 +17,12 @@ noremap ff :NERDTreeToggle<CR>
 " Cmake
 let g:cmake_export_compile_commands = 1
 
-" Gruvbox
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'medium'
+" Color-theme
+syntax on
+let g:onedark_hide_endofbuffer = 1
+let g:onedark_terminal_italics = 1
+colorscheme onedark
+let g:airline_theme='onedark'
 
 " coc.nvim
 let g:coc_global_extensions = [
@@ -26,6 +30,7 @@ let g:coc_global_extensions = [
 	\ 'coc-clangd',
 	\ 'coc-json',
 	\ 'coc-tsserver',
+	\ 'coc-pyright',
 	\ ]
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -108,7 +113,9 @@ nnoremap <esc> :noh<return>
 " Parameters
 set number
 set relativenumber
+set nowrap
 set tabstop=4
 set shiftwidth=4
 set ignorecase
+set smartcase
 set nocompatible
