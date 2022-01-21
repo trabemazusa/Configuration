@@ -1,15 +1,13 @@
 " Plugin
 call plug#begin('~/.vim/plugged')
+" Plug 'morhetz/gruvbox'
+Plug 'w0ng/vim-hybrid'
 Plug 'scrooloose/nerdtree'
-Plug 'joshdick/onedark.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'vhdirk/vim-cmake'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
-
 " Plugin Setting
 " NERDTree
 noremap ff :NERDTreeToggle<CR>
@@ -18,11 +16,7 @@ noremap ff :NERDTreeToggle<CR>
 let g:cmake_export_compile_commands = 1
 
 " Color-theme
-syntax on
-let g:onedark_hide_endofbuffer = 1
-let g:onedark_terminal_italics = 1
-colorscheme onedark
-let g:airline_theme='onedark'
+colorscheme hybrid
 
 " coc.nvim
 let g:coc_global_extensions = [
@@ -110,7 +104,7 @@ nnoremap tc :tabclose<return>
 
 nnoremap <esc> :noh<return>
 
-" Parameters
+" Basic Parameters
 set number
 set relativenumber
 set nowrap
@@ -119,3 +113,5 @@ set shiftwidth=4
 set ignorecase
 set smartcase
 set nocompatible
+set laststatus=0
+set ruler
