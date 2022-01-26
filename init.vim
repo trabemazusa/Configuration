@@ -1,11 +1,9 @@
 " Plugin
 call plug#begin('~/.vim/plugged')
-" Plug 'morhetz/gruvbox'
 Plug 'w0ng/vim-hybrid'
 Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jackguo380/vim-lsp-cxx-highlight'
-Plug 'vhdirk/vim-cmake'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
 " Plugin Setting
@@ -20,31 +18,25 @@ colorscheme hybrid
 
 " coc.nvim
 let g:coc_global_extensions = [
-	\ 'coc-pairs',
-	\ 'coc-clangd',
-	\ 'coc-json',
-	\ 'coc-tsserver',
-	\ 'coc-pyright',
-	\ ]
-" TextEdit might fail if hidden is not set.
-set hidden
+    \ 'coc-pairs',
+    \ 'coc-clangd',
+    \ 'coc-json',
+    \ 'coc-tsserver',
+    \ 'coc-pyright',
+    \ ]
 
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
 
-" Give more space for displaying messages.
-set cmdheight=2
-
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
 
+set signcolumn=no
+
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-
-" Always show the signcolumn  
-set signcolumn=no
 
 " Used for the format on type and improvement of brackets
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
@@ -86,10 +78,6 @@ function! s:show_documentation()
   endif
 endfunction
 
-" Mappings for CoCList
-" Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-
 " Panes Remapping
 nnoremap <C-j> <C-W><C-J>
 nnoremap <C-k> <C-W><C-K>
@@ -102,16 +90,13 @@ nnoremap tl :tabnext<return>
 nnoremap th :tabprev<return>
 nnoremap tc :tabclose<return>
 
-nnoremap <esc> :noh<return>
-
 " Basic Parameters
-set number
-set relativenumber
 set nowrap
-set tabstop=4
+set softtabstop=4
 set shiftwidth=4
+set expandtab
 set ignorecase
 set smartcase
-set nocompatible
-set laststatus=0
+set laststatus=1
 set ruler
+set nohlsearch
