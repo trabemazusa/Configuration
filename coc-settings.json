@@ -1,8 +1,0 @@
-{
-    "clangd.semanticHighlighting": true,
-    "coc.preferences.semanticTokensHighlights": false,
-    "suggest.autoTrigger": "none",
-    "signature.target": "echo",
-    "clangd.fallbackFlags": ["-std=c++17"],
-    "python.pythonPath": "/opt/homebrew/bin/python3"
-}
