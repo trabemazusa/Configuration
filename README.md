@@ -1,5 +1,7 @@
-# My Neovim Configuration
+# My Configuration
 
-## Path
-`~/.config/nvim/`
+- neovim
+`~/.config/nvim/init.vim`
 
+- tmux
+`~/.tmux.conf
