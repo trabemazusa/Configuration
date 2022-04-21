@@ -1,5 +1,5 @@
 
-# read ~/.bashrc file
+# load ~/.zshrc file
 if [ -f ~/.zshrc ]; then
     source ~/.zshrc
 fi
