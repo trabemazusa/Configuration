@@ -1,7 +1,5 @@
 " .vimrc
 syntax on
-set background=dark
-colorscheme hybrid
 
 nnoremap <C-j> <C-W><C-J>
 nnoremap <C-k> <C-W><C-K>
@@ -20,8 +18,3 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
-
-" new in init.vim
-set guicursor=i:block
-set laststatus=1
-set nohlsearch
